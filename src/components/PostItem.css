@@ -1,0 +1,25 @@
+.post-item {
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    text-align: center;
+}
+
+.post-item-id {
+    font-weight: bold;
+}
+
+.post-item-title {
+    text-align: left;
+}
+
+.post-item-title a {
+    color: #333;
+    text-decoration: none;
+    text-align: right;
+}
+
+.
+
+/*.post-item-title a:hover {*/
+/*    text-decoration: none;*/
+/*}*/

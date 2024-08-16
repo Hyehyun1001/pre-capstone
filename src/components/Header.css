@@ -1,0 +1,17 @@
+.header {
+    padding: 5px;
+    background: #dbdbdb;
+    text-align: center;
+}
+
+.header-link {
+    text-decoration: none;
+    color: black;
+}
+
+.header-image {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+

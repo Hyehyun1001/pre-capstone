@@ -1,0 +1,78 @@
+.header-title {
+    color: #49454F;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.post-list {
+    margin: 0 auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.post-list th {
+    padding: 10px;
+    border-top: 2px solid #000000;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #78747E;
+    text-align: center;
+}
+
+.post-list td {
+    padding: 10px;
+    border-top: 1px solid #78747E;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #78747E;
+}
+
+
+.th-no {
+    width: 8%;
+}
+
+.th-title {
+    width: 70%;
+}
+
+
+
+.post-list-actions {
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 78px;
+}
+
+.post-list-search {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.post-list-search:focus {
+    outline: none;
+    border-color: #78747E;
+}
+
+
+
+.post-list-create-button {
+    padding: 10px 20px;
+    background-color: #78747E;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.post-list-create-button:hover {
+    background-color: #49454F;
+}
