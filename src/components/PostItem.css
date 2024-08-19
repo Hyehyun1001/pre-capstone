@@ -6,6 +6,7 @@
 
 .post-item-id {
     font-weight: bold;
+    cursor: pointer;
 }
 
 .post-item-title {

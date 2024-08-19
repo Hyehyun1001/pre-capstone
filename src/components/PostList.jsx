@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PostItem from './PostItem';
 import './PostList.css';
 
-const PostList = ({ posts }) => {
+const PostList = ({ posts, onTogglePin }) => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleSearchChange = (e) => {
@@ -28,7 +28,7 @@ const PostList = ({ posts }) => {
                 </thead>
                 <tbody>
                 {filteredPosts.map(post => (
-                    <PostItem key={post.id} post={post}/>
+                    <PostItem key={post.id} post={post} onTogglePin={onTogglePin} />
                 ))}
                 </tbody>
             </table>

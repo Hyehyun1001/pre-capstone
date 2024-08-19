@@ -9,8 +9,7 @@ const PostCreate = ({onSubmit}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // 제목과 내용을 모두 입력했는지 확인
-        if (title.trim() === '' || content.trim() === '') {
+       if (title.trim() === '' || content.trim() === '') {
             alert('제목과 내용을 모두 입력하세요.');
             return;
         }

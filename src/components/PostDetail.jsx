@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import './PostDetail.css';
 
-const PostDetail = ({ posts, onUpdate }) => {
+const PostDetail = ({ posts, onUpdate, onDelete }) => {
     const navigate = useNavigate();
     const { id } = useParams();
     const [post, setPost] = useState(null);
@@ -29,13 +29,20 @@ const PostDetail = ({ posts, onUpdate }) => {
         setEditMode(false);
     };
 
+    const handleDelete = () => {
+        const confirmDelete = window.confirm("이 게시물을 삭제하시겠습니까?");
+        if (confirmDelete) {
+            onDelete(post.id);
+            navigate('/');
+        }
+    };
+
     const handleEditClick = () => {
         setEditMode(true);
     };
 
     const handleCancel = () => {
         setEditMode(false);
-        // 데이터가 수정되기 전 상태로 복원
         if (post) {
             setTitle(post.title);
             setContent(post.content);
@@ -68,7 +75,7 @@ const PostDetail = ({ posts, onUpdate }) => {
                         </div>
                     </div>
                     <div className="post-detail-actions">
-                        <button type="button" onClick={handleCancel}>취소</button>
+                        <button className="cancel-button" type="button" onClick={handleCancel}>취소</button>
                         <button type="submit">수정</button>
                     </div>
                 </form>
@@ -83,8 +90,8 @@ const PostDetail = ({ posts, onUpdate }) => {
                         <p className="post-detail-content">{post.content}</p>
                     </div>
                     <div className="post-detail-actions">
-                        <button type="button" onClick={() => navigate('/')}>돌아가기</button>
                         <button type="button" onClick={handleEditClick}>수정</button>
+                        <button className="delete-button" type="button" onClick={handleDelete}>삭제</button>
                     </div>
                 </>
             )}

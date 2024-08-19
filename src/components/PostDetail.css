@@ -79,3 +79,7 @@ input:focus, textarea:focus {
 /*.post-detail-actions button[type="button"] {*/
 /*    background-color: #e53e3e;*/
 /*}*/
+
+.delete-button, .cancel-button {
+    background-color: #e53e3e !important;
+}
